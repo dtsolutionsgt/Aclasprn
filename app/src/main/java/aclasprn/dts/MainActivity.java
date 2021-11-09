@@ -652,7 +652,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mtimer.postDelayed(mrunner,1000);
     }
 
-
     public byte[] getFontSize(int iWidth,int iHeight){
 
         byte[] cmd = new byte[] { 0x1D, 0x21, 0x00};
