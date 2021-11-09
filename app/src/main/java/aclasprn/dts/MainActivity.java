@@ -44,6 +44,8 @@ import aclasdriver.AclasTool;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
+
+
     private String mac="",fname="",QRCodeStr="";
     private int askprint,copies;
 
