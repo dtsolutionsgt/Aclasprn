@@ -1,0 +1,81 @@
+<resources>
+    <string name="app_name">Aclas Print</string>
+    <string name="action_settings">V1.013</string>
+
+    <string name="tab_printer">Printer</string>
+    <string name="tab_magcard">Magcard</string>
+    <string name="tab_serialport">Serialport</string>
+    <string name="tab_scale">Scale</string>
+    <string name="tab_drawer">Drawer</string>
+    <string name="tab_lcd">LCD</string>
+    <string name="tab_power">LCD</string>
+
+    <string name="prn_open">Open</string>
+    <string name="prn_close">Close</string>
+    <string name="prn_printbmp">Bmp</string>
+    <string name="prn_printesc">SendEsc</string>
+    <string name="prn_feed">Feed</string>
+    <string name="prn_status">Status:</string>
+    <string name="prn_nopaper">Paper not exist</string>
+    <string name="prn_havepaper">Paper exist</string>
+
+    <string name="mag_open">Open</string>
+    <string name="mag_close">Close</string>
+    <string name="mag_read_start">StartRead</string>
+    <string name="read_stop">Stop</string>
+    <string name="mag_track1">Track1:</string>
+    <string name="mag_track2">Track2:</string>
+    <string name="mag_track3">Track3:</string>
+
+    <string name="uart_open">Open</string>
+    <string name="uart_close">Close</string>
+    <string name="uart_read">StartRead</string>
+    <string name="uart_write">Write</string>
+    <string name="uart_hex">Hex</string>
+
+
+    <string name="scale_start">Strart</string>
+    <string name="scale_close">Close</string>
+    <string name="scale_zero">Zero</string>
+    <string name="scale_data">Weight:</string>
+
+    <string name="lcd_open">Open</string>
+    <string name="lcd_close">Close</string>
+    <string name="lcd_clear">Clear</string>
+    <string name="lcd_char">Text</string>
+    <string name="lcd_pic">Pic</string>
+    <string name="lcd_light">Light</string>
+    <string name="lcd_off">Off</string>
+    <string name="lcd_contrast">Contrast</string>
+
+
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="drawer_do">Action</string>
+
+
+    <string name="power_value">Voltage</string>
+    <string name="power_read">ReadPower</string>
+
+    <string-array name="lcd_Type">
+        <item >9VFD</item>
+        <item >32X144</item>
+        <item >65X132</item>
+        <item >24X128</item>
+        <item >32X240</item>
+        <item >NONE</item>
+    </string-array>
+    <string-array name="device_Type">
+        <item >AOBX</item>
+        <item >AO4X</item>
+        <item >AO5</item>
+        <item >AOW</item>
+        <item >AOA</item>
+        <item >AOW3066</item>
+        <item >UNKNOWN</item>
+    </string-array>
+    <string-array name="printer_Type">
+        <item >2inch</item>
+        <item >3inch</item>
+    </string-array>
+</resources>
