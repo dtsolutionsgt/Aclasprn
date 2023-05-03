@@ -15,7 +15,6 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.provider.DocumentFile;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.View;
 import android.view.Menu;
@@ -44,8 +43,7 @@ import aclasdriver.AclasTool;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-
-
+    
     private String mac="",fname="",QRCodeStr="";
     private int askprint,copies;
 
@@ -260,21 +258,31 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void doPrint(){
 
-        for (int i = 0; i <copies; i++) {
+        try {
 
-            printEscData();
-            showLog("Send ESCPOS Data");
+            for (int i = 0; i <copies; i++) {
 
-            if(!QRCodeStr.isEmpty()) {
-                String qrname = Environment.getExternalStorageDirectory().getAbsolutePath()+"/qr.jpg";
-                printBmp(qrname);
+                printEscData();
+                showLog("Send ESCPOS Data");
+
+                try {
+                    if(!QRCodeStr.isEmpty()) {
+                        String qrname = Environment.getExternalStorageDirectory().getAbsolutePath()+"/qr.jpg";
+                        printBmp(qrname);
+                    }
+                } catch (Exception e) {
+                }
+
+                devPrn.doCut();
+                showLog("Printer Cut Paper");
             }
 
-            devPrn.doCut();
-            showLog("Printer Cut Paper");
+            devDrawer.openDrawer();
+
+        } catch (Exception e) {
+            showMsg(new Object(){}.getClass().getEnclosingMethod().getName()+" . "+e.getMessage());
         }
 
-        devDrawer.openDrawer();
 
         exitApp();
     }
@@ -648,7 +656,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Runnable mrunner=new Runnable() {
             @Override
             public void run() {
-                finish();
+                try {
+                    finish();
+                } catch (Exception e) {
+                    showMsg(new Object(){}.getClass().getEnclosingMethod().getName()+" . "+e.getMessage());
+                }
             }
         };
         mtimer.postDelayed(mrunner,1000);
